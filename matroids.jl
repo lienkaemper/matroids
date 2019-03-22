@@ -150,9 +150,12 @@ function checkUniformTopeAxioms(topes)
             return false
         end
     end
-    #check TU2: if X\subset {0, +, -}^n is a restriction of some T in topes, then either there is some T in topes such that X\circ T \in topes, X\circ -T \notin topes, or X\circ Y \in topes for all Y\in {0, +, -}^n
+    #check TU2: if X\subset {0, +, -}^n is a restriction of some T in topes,
+    #then either there is some T in topes such that X\circ T \in topes,
+    #X\circ -T \notin topes, or X\circ Y \in topes for all Y\in {0, +, -}^n
     for X in all_restrictions
-        split = false #true if there is some T in topes such that X\circ T \in topes
+        split = false #true if there is some T in topes such that X\circ T
+        #\in topes
         all = true #true if  X\circ T \in topes for all T\in topes
         for T in topes
             X1 = composition(X, T)
@@ -200,9 +203,12 @@ function checkTopeAxioms(topes)
             return false
         end
     end
-    #check T2: if X\subset {0, +, -}^n is a restriction of some T in topes, then either there is some T in topes such that X\circ T \in topes, X\circ -T \notin topes, or X\circ T \in topes for all T\in topes
+    #check T2: if X\subset {0, +, -}^n is a restriction of some T in topes,
+    #then either there is some T in topes such that X\circ T \in topes,
+    # X\circ -T \notin topes, or X\circ T \in topes for all T\in topes
     for X in all_restrictions
-        split = false #true if there is some T in topes such that X\circ T \in topes
+        split = false #true if there is some T in topes such that
+        #X\circ T \in topes
         all = true #true if  X\circ T \in topes for all T\in topes
         for T in topes
             X1 = composition(X, T)
@@ -247,9 +253,12 @@ function findBadRestrictions(topes)
             return (false, bad_restrictions)
         end
     end
-    #check T2: if X\subset {0, +, -}^n is a restriction of some T in topes, then either there is some T in topes such that X\circ T \in topes, X\circ -T \notin topes, or X\circ T \in topes for all T\in topes
+    #check T2: if X\subset {0, +, -}^n is a restriction of some T in topes,
+    # then either there is some T in topes such that X\circ T \in topes,
+    #X\circ -T \notin topes, or X\circ T \in topes for all T\in topes
     for X in all_restrictions
-        split = false #true if there is some T in topes such that X\circ T \in topes
+        split = false #true if there is some T in topes such that
+                      #X\circ T \in topes
         all = true #true if  X\circ T \in topes for all T\in topes
         for T in topes
             X1 = composition(X, T)
